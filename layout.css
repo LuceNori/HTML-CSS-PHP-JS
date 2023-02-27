@@ -1,0 +1,17 @@
+body{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+form{
+	width: 20%;
+	height: 205px;
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
