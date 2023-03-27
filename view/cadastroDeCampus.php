@@ -19,7 +19,7 @@
                 <h1>Cadastro de Campus</h1>
             </div>
         </div>
-        <form action="" method="POST">
+        <form action="../repositorio/salvarCampus.php" method="POST">
             <div class="row mb-3">
                 <div class="col col-md-8">
                     <label class="form-label" for="idnome">Nome</label>
