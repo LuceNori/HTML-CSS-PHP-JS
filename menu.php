@@ -22,8 +22,8 @@ $path = 'http://' . $_SERVER["HTTP_HOST"] . '/projetoWeb2';
                         Campus
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo $path; ?>/view/cadastroDeCampus.php">Cadastrar</a></li>
-                        <li><a class="dropdown-item" href="<?php echo $path; ?>/view/buscarCampus.php">Buscar</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $path; ?>/view/campus/cadastroDeCampus.php">Cadastrar</a></li>
+                        <li><a class="dropdown-item" href="<?php echo $path; ?>/view/campus/buscarCampus.php">Buscar</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
