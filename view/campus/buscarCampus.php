@@ -50,7 +50,7 @@
                             echo "<td>" . $linha['nomeCampus'] . "</td>";
                             echo "<td>" . $linha['CEP'] . "</td>";
                             echo "<td><a href=\"../../repositorio/campus/removerCampus.php?idCampus=". $linha['idCampus'] ."\" class=\"btn btn-danger\">Remover</a></td>";
-                            echo "<td><input class=\"btn btn-secondary\" type=\"button\" value=\"Editar\"></td>";
+                            echo "<td><a href=\"editarCampus.php?idCampus=". $linha['idCampus'] ."\" class=\"btn btn-secondary\">Editar</a></td>";
                         echo "</tr>";
                     }
                     ?>
