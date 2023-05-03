@@ -23,7 +23,7 @@
             <div class="row mb-3">
                 <div class="col col-md-8">
                     <label class="form-label" for="idnome">Nome</label>
-                    <input class="form-control" type="text" name="nome" id="idnome">
+                    <input class="form-control" type="text" name="nome" id="idnome" required>
                 </div>
                 <div class="col col-md-4">
                     <label class="form-label" for="idcep">CEP</label>
