@@ -9,6 +9,8 @@
     <link href="<?php echo $path; ?>/arquivos/css/bootstrap.min.css" rel="stylesheet">
     <script src="<?php echo $path; ?>/arquivos/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<?php echo $path; ?>/arquivos/js/busca.cep.js"></script>
+    <link href=".<?php echo $path; ?>/arquivos/css/custom.css" rel="stylesheet">
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <div class="row">
             <?php
             try{
-                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root", "root123");
+                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root", "");
             }catch(PDOException $e){
                 die('aconteceu um erro: ' . $e->getMessage());
             }
@@ -34,7 +36,8 @@
                 $resultado = $conexao->query($sql);
                 if($resultado->rowCount() > 0){
                     ?>
-                    <table class="table">
+                    <table class="table" summary="Tabela referente as informações dos cursos">
+                    <caption>Tabela de informações dos cursos</caption>
                     <thead>
                         <tr>
                         <th scope="col">#</th>
@@ -53,7 +56,7 @@
                             echo "<td>" . $linha['idCurso'] . "</td>";
                             echo "<td>" . $linha['nomeCurso'] . "</td>";
                             echo "<td>" . $linha['notaCurso'] . "</td>";
-                            echo "<td>" . $linha['nomeArera'] . "</td>";
+                            echo "<td>" . $linha['nomeArea'] . "</td>";
                             echo "<td>" . $linha['nomeCampus'] . "</td>";
                             echo "<td><a href=\"../../repositorio/curso/removerCurso.php?idCurso=". $linha['idCurso'] ."\" class=\"btn btn-danger\">Remover</a></td>";
                             echo "<td><a href=\"editarCurso.php?idCurso=". $linha['idCurso'] ."\" class=\"btn btn-secondary\">Editar</a></td>";
@@ -70,6 +73,9 @@
             ?>
         </div>
     </div>
+    <script src="<?php echo $path; ?>/arquivos/js/cor.js"></script>
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

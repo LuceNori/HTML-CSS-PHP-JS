@@ -1,6 +1,6 @@
 <?php
 try{
-    $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2","root","root123");
+    $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2","root","");
 }catch(PDOException $e){
     die("Ocorreu um erro inesperado " . $e->getMessage());
 }
@@ -12,12 +12,12 @@ $campus = $_POST['campus'];
 $area = $_POST['area'];
 
 try{
-    $sql = "update curso set nomeCurso='$nome', notaCurso='$notat', idArea='$area', idCampus='$idCampus' where idCurso=".$idCurso;
+    $sql = "update curso set nomeCurso='$nome', notaCurso='$nota', idCampus='$campus',idArea='$area' where idCurso=".$idCurso;
     $conexao->exec($sql);
     echo "Editado com sucesso !!!";
 }catch(PDOException $e){
     die("Ocorreu um erro " . $e->getMessage());
 }
 
-header('Location: ../../view/campus/buscarCampus.php');
+header('Location: ../../view/curso/buscarCurso.php');
 ?>

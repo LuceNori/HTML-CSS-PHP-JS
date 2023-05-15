@@ -1,3 +1,6 @@
+<?php
+$path = 'http://' . $_SERVER["HTTP_HOST"] . '/projetoWeb2';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,11 @@
     <meta charset="UTF-8">
     <title>Manter Aluno e Professor</title>
     <link href="./arquivos/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./arquivos/css/custom.css" rel="stylesheet">
+    <link href="./arquvios/css/teste.css" rel="stylesheet">
+    <script src="./arquivos/js/switch.js"></script>
     <script src="./arquivos/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -25,13 +32,13 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="2000">
-                            <img src="./arquivos/imagens/ifms1.png" class="d-block w-100" alt="...">
+                            <img src="./arquivos/imagens/ifms1.png" class="d-block w-100" alt="Imagens de estudantes sorrindo enquanto comem">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="./arquivos/imagens/ifms2.jpeg" class="d-block w-100" alt="...">
+                            <img src="./arquivos/imagens/ifms2.jpeg" class="d-block w-100" alt="Imagem do diretor conversando com pais de estudantes">
                         </div>
                         <div class="carousel-item">
-                            <img src="./arquivos/imagens/ifms3.jpeg" class="d-block w-100" alt="...">
+                            <img src="./arquivos/imagens/ifms3.jpeg" class="d-block w-100" alt="Imagem dos professors do instituto federal de mato grosso do sul sentado em carteiras escrevendo em papeis">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -47,18 +54,22 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <a href="https://www.ifms.edu.br/campi/campus-corumba"><img
+                                    src="<?php echo $path; ?>/arquivos/imagens/marcaifms.png" width="100%"></a>
+                            <p class="card-text"><br>Site do ifms corumbá</p>
+                            <a href="https://www.ifms.edu.br/campi/campus-corumba" class="btn btn-primary">IFMS CORUMBÁ</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./arquivos/js/cor.js"></script>
+    <script src="./arquivos/js/switch.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

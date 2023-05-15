@@ -9,6 +9,8 @@
     <link href="<?php echo $path; ?>/arquivos/css/bootstrap.min.css" rel="stylesheet">
     <script src="<?php echo $path; ?>/arquivos/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<?php echo $path; ?>/arquivos/js/busca.cep.js"></script>
+    <link href="<?php echo $path; ?>/arquivos/css/custom.css" rel="stylesheet">
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <div class="row">
             <?php
             try{
-                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root", "root123");
+                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root", "");
             }catch(PDOException $e){
                 die('aconteceu um erro: ' . $e->getMessage());
             }
@@ -32,7 +34,8 @@
                 $resultado = $conexao->query($sql);
                 if($resultado->rowCount() > 0){
                     ?>
-                    <table class="table">
+                    <table class="table" summary="Tabela referente as áreas disponiveis">
+                    <caption>Tabela de informações das áreas</caption>
                     <thead>
                         <tr>
                         <th scope="col">#</th>
@@ -46,7 +49,7 @@
                     while($linha = $resultado->fetch()){
                         echo "<tr>";
                             echo "<td>" . $linha['idArea'] . "</td>";
-                            echo "<td>" . $linha['nomeArera'] . "</td>";
+                            echo "<td>" . $linha['nomeArea'] . "</td>";
                             echo "<td><a href=\"../../repositorio/area/removerArea.php?idArea=". $linha['idArea'] ."\" class=\"btn btn-danger\">Remover</a></td>";
                             echo "<td><a href=\"editarArea.php?idArea=". $linha['idArea'] ."\" class=\"btn btn-secondary\">Editar</a></td>";
                         echo "</tr>";
@@ -62,6 +65,9 @@
             ?>
         </div>
     </div>
+    <script src="<?php echo $path; ?>/arquivos/js/cor.js"></script>
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

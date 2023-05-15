@@ -1,6 +1,6 @@
 <?php
 try{
-    $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2","root","root123");
+    $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2","root","");
 }catch(PDOException $e){
     die("Ocorreu um erro inesperado " . $e->getMessage());
 }
@@ -14,5 +14,5 @@ try{
 }catch(PDOException $e){
     die("Ocorreu um erro " . $e->getMessage());
 }
-header('Location: ../../view/campus/buscarCampus.php');
+header('Location: ../../view/area/buscarArea.php');
 ?>

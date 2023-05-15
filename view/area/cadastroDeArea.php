@@ -9,6 +9,8 @@
     <link href="<?php echo $path; ?>/arquivos/css/bootstrap.min.css" rel="stylesheet">
     <script src="<?php echo $path; ?>/arquivos/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<?php echo $path; ?>/arquivos/js/busca.cep.js"></script>
+    <link href="<?php echo $path; ?>/arquivos/css/custom.css" rel="stylesheet">
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
 </head>
 
 <body>
@@ -23,12 +25,15 @@
             <div class="row mb-3">
                 <div class="col col-md-12">
                     <label class="form-label" for="idnome">Nome</label>
-                    <input class="form-control" type="text" name="nome" id="idnome">
+                    <input class="form-control" type="text" name="nome" id="idnome" required>
                 </div>
             </div>
             <input class="btn btn-primary" type="submit" value="Salvar">
         </form>
     </div>
+    <script src="<?php echo $path; ?>/arquivos/js/cor.js"></script>
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

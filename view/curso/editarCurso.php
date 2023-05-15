@@ -11,6 +11,8 @@
     <link href="<?php echo $path; ?>/arquivos/css/bootstrap.min.css" rel="stylesheet">
     <script src="<?php echo $path; ?>/arquivos/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<?php echo $path; ?>/arquivos/js/busca.cep.js"></script>
+    <link href="<?php echo $path; ?>/arquivos/css/custom.css" rel="stylesheet">
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         </div>
         <?php
         try{
-            $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2","root","root123");
+            $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2","root","");
         }catch(PDOException $e){
             die("Ocorreu um erro inesperado " . $e->getMessage());
         }
@@ -37,16 +39,16 @@
                 $linha = $resultado->fetch();
            
         ?>
-        <form action="<?php echo $path; ?>/repositorio/area/editarArea.php" method="POST">
+        <form action="<?php echo $path; ?>/repositorio/curso/editarCurso.php" method="POST">
         <input value="<?php echo $linha['idCurso'] ?>" type="text" name="idCurso" id="idCurso" hidden>
             <div class="row mb-3">
                 <div class="col col-md-9">
                     <label class="form-label" for="idnome">Nome Curso</label>
-                    <input class="form-control" value="<?php echo $linha['nomeCurso'] ?>" type="text" name="nome" id="idnome">
+                    <input class="form-control" value="<?php echo $linha['nomeCurso'] ?>" type="text" name="nome" id="idnome" required>
                 </div>
                 <div class="col col-md-3">
                     <label class="form-label" for="idnota">Nota do Curso</label>
-                    <input class="form-control" type="number" value="<?php echo $linha['notaCurso'] ?>" name="nota" id="idnota">
+                    <input class="form-control" type="number" value="<?php echo $linha['notaCurso'] ?>" name="nota" id="idnota" required>
                 </div>
             </div>
             <?php 
@@ -61,7 +63,7 @@
 
                     <?php
             try{
-                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root", "root123");
+                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root","");
             }catch(PDOException $e){
                 die('aconteceu um erro: ' . $e->getMessage());
             }
@@ -92,7 +94,7 @@
 
                     <?php
             try{
-                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root", "root123");
+                $conexao = new PDO("mysql:host=localhost; dbname=projetoweb2", "root","");
             }catch(PDOException $e){
                 die('aconteceu um erro: ' . $e->getMessage());
             }
@@ -105,7 +107,7 @@
                     <select class="form-control" name="area">
                         <?php
                     while($linha = $resultado->fetch()){
-                        echo "<option value=\"".$linha['idArea']."\">" . $linha['nomeArera'] . "</option>";
+                        echo "<option value=\"".$linha['idArea']."\">" . $linha['nomeArea'] . "</option>";
                     }
                     ?>
                     </select>
@@ -121,6 +123,9 @@
             <input class="btn btn-primary" type="submit" value="Salvar">
         </form>
     </div>
+    <script src="<?php echo $path; ?>/arquivos/js/cor.js"></script>
+    <script src="<?php echo $path; ?>/arquivos/js/switch.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
